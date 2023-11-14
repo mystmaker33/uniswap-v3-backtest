@@ -64,7 +64,7 @@ export const getPoolHourData = async (pool, fromdate, todate, protocol) => {
       return data.data.poolHourDatas;
     }
     else {
-      console.log("nothing returned from getPoolHourData")
+      console.log("nothing returned from getPoolHourData ", data)
       return null;
     }
 

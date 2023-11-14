@@ -89,6 +89,7 @@ export const tokensForStrategy = (minRange, maxRange, investment, price, decimal
     amount1 = delta * (sqrtHigh - sqrtLow);
     amount0 = 0;
   }
+  console.log([amount0, amount1])
   return [amount0, amount1];
 
 }
@@ -150,6 +151,7 @@ export const calcFees = (data, pool, priceToken, liquidity, unboundedLiquidity, 
     const tokenRatioFirstClose = tokensFromLiquidity(firstClose, min, max, liquidity, pool.token0.decimals, pool.token1.decimals);
     const x0 = tokenRatioFirstClose[1];
     const y0 = tokenRatioFirstClose[0];
+    console.log(tokenRatioFirstClose)
 
     if (priceToken === 0) {
       fgV = i === 0 ? 0 : fg[0] + (fg[1] * d.close);
